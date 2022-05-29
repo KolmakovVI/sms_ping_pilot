@@ -24,7 +24,10 @@ def ping_sms_single(api_key):
 def ping_sms_paсkage(api_key, nubmers):
     url = "https://smspilot.ru/api2.php"
     param = {'api_key': api_key, "text": "HLRVIP"}
-    print(param['text'])
+    #  START HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    for nubmer in numbers:
+
+
 
 
 if __name__ == '__main__':
