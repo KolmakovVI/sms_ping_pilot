@@ -4,7 +4,7 @@ import requests
 
 
 def read_api_key():
-    with open("C:/pyproj/api_key_pilot.txt", "r") as file:
+    with open("D:/pyproj/api_key_pilot.txt", "r") as file:
         for line in file:
             api_key = line
     return api_key
@@ -24,8 +24,14 @@ def ping_sms_single(api_key):
 def ping_sms_paсkage(api_key, nubmers):
     url = "https://smspilot.ru/api2.php"
     param = {'api_key': api_key, "text": "HLRVIP"}
-    #  START HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    for nubmer in numbers:
+
+    list_of_numb = []
+    for number in numbers:
+        numb_dict = {'to': number}
+        list_of_numb.append(numb_dict) # Как вставить словарь в список???
+    param['send'] = list_of_numb
+    print(param)
+    return param
 
 
 

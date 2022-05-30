@@ -1,10 +1,8 @@
-import json
-import requests
+list = []
 
-response = requests.get("https://jsonplaceholder.typicode.com/todos")
-todos = json.loads(response.text)
+dict = {'to': '123'}
+dict2 = {'to': "123"}
 
-print(todos == response.json())  # True
-print(type(todos))  # <class 'list'>
-
-print(todos[:10])  # ...
+list.append(dict)
+list.append(dict2)
+print(list)
